@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                DEFAULT: "#3254FF",
+                100: "#243FDB",
+                200: "#192DB7",
+                300: "#0F1E93",
+                400: "#09147A",
+              },
+              dark: {
+                primary: "#3A3541DE",
+                secondary: "#3A3541AD",
+                disabled: "#3A354161",
+              },
+              light: {
+                primary: "#E7E3FCDE",
+                secondary: "#E7E3FCAD",
+                disabled: "#E7E3FC61",
+              },
+              paper: "#22282A",
+              body: "#2F3334",
+              "page-header": "#181A1C",
+              extra: "#3D4142",
+              "outline-border": "#E7E3FC3B",
+              "input-border": "#E7E3FC38",
+              "input-field": "#E7E3FC0A",
+              chip: "#E7E3FC14",
+            },
+            fontFamily: {
+              lato: ["Lato", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="font-lato bg-body text-light-primary min-h-screen flex items-center justify-center relative"
+    style="background: url('images/BGLogin.jpg') center/cover no-repeat"
+  >
+    <div class="absolute inset-0 bg-black/10 z-0"></div>
+    <div
+      class="relative z-10 flex flex-col items-center w-full min-h-screen justify-center mx-10 sm:mx-0"
+    >
+      <div
+        class="bg-paper bg-opacity-90 rounded-2xl shadow-xl px-8 py-10 w-full max-w-md flex flex-col items-center"
+      >
+        <img src="images/Logo.svg" alt="Chill Logo" class="w-18 mb-4" />
+        <h2 class="text-2xl text-white mb-1">Masuk</h2>
+        <p class="text-white text-sm mb-6">Selamat datang kembali!</p>
+        <form class="w-full flex flex-col">
+          <div class="flex flex-col gap-8">
+            <div>
+              <label class="block text-sm text-white mb-1" for="username"
+                >Username</label
+              >
+              <input
+                id="username"
+                type="text"
+                placeholder="Masukkan username"
+                class="w-full rounded-full bg-input-field border border-input-border px-4 py-2 text-white placeholder:text-light-secondary"
+              />
+            </div>
+            <div>
+              <label class="block text-sm text-white mb-1" for="password"
+                >Kata Sandi</label
+              >
+              <div class="relative">
+                <input
+                  id="password"
+                  type="password"
+                  placeholder="Masukkan kata sandi"
+                  class="w-full rounded-full bg-input-field border border-input-border px-4 py-2 text-white placeholder:text-light-secondary"
+                />
+                <button
+                  type="button"
+                  class="absolute right-3 top-1/2 -translate-y-1/2"
+                >
+                  <img src="images/ShowPassword.svg" alt="Show Password" />
+                </button>
+              </div>
+              <div class="flex justify-between mt-4 text-xs">
+                <span
+                  >Belum punya akun?
+                  <a href="#" class="text-white">Daftar</a></span
+                >
+                <a href="#" class="text-white">Lupa kata sandi?</a>
+              </div>
+            </div>
+          </div>
+          <button
+            type="submit"
+            class="w-full rounded-full border border-outline-border bg-gray-600 text-white py-2 mt-8"
+          >
+            Masuk
+          </button>
+          <div class="flex items-center justify-center mt-2">
+            <span class="text-xs">Atau</span>
+          </div>
+          <button
+            type="button"
+            class="w-full rounded-full border border-outline-border py-2 mt-2 flex items-center justify-center gap-2 text-white"
+          >
+            <img
+              src="https://www.svgrepo.com/show/475656/google-color.svg"
+              alt="Google"
+              class="w-5 h-5"
+            />
+            Masuk dengan Google
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
